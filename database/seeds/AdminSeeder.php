@@ -1,6 +1,5 @@
 <?php
 
-use App\User;
 use Illuminate\Database\Seeder;
 
 class AdminSeeder extends Seeder
@@ -12,10 +11,10 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        $superAdmin = new User();
-        $superAdmin->name = "Bosco Boys";
-        $superAdmin->email = "madetiloye@gmail.com";
-        $superAdmin->password = Hash::make('dominicsavio');
-        $superAdmin->save();
+        $Admin = new User();
+        $Admin->name = "Bosco Boys";
+        $Admin->email = "madetiloye@gmail.com";
+        $Admin->password = Hash::make('dominicsavio');
+        $Admin->save();
     }
 }
