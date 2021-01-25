@@ -125,7 +125,7 @@ class NewsController extends Controller
     public function destroy($id)
     {
         try {
-            $news = News::finorFail($id);
+            $news = News::findorFail($id);
             $news->delete();
             if(!empty($news->image)) {
                 unlink('news/'.$news->image);
