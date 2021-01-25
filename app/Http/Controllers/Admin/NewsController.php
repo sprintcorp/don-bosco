@@ -44,8 +44,8 @@ class NewsController extends Controller
         $validator = Validator::make($request->all(), [
             'title' => 'required|string',
             'body' => 'required|string',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:500',
-            'category_id' => 'required'
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:1000',
+            'category_id' => 'required|string'
         ]);
 
         if ($validator->fails()) {
@@ -98,7 +98,7 @@ class NewsController extends Controller
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:500',
             'category_id' => 'required'
         ]);
-
+            
         if ($validator->fails()) {
             alert()->warning('WarningAlert','Validation Error');
             return back();

@@ -91,7 +91,7 @@
           <div class="form-group row">
                 <label class="col-2 form-label">Category </label>
                 <div class="col-md-10" >
-                     <select class="form-control" name="category">
+                     <select class="form-control" name="category_id">
                      
                     @foreach($categories as $category)
                         <option value="{{ $category->id }}" {{ $category->id == $info->category ? 'selected' :'' }}> 
